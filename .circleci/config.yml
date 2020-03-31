@@ -1,0 +1,15 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.14
+
+    working_directory: /go/src/github.com/mingruimingrui/batcher
+
+    steps:
+      - checkout
+      - run: go test -v
+      - run: go test -v -bench=. -run ^$ -cpu=1
+      - run: go test -v -bench=. -run ^$ -cpu=31
+      - run: go test -v -bench=BenchmarkSendRequestParallel -run=^$ -cpu=32
