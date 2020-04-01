@@ -9,7 +9,8 @@ jobs:
 
     steps:
       - checkout
-      - run: cd http-batching-service && go build
+
+      # Run Unit tests
       - run: go test -v
       - run: go test -v -bench=. -run ^$ -cpu=1
       - run: go test -v -bench=. -run ^$ -cpu=31

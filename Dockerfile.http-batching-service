@@ -1,7 +1,7 @@
 FROM golang:alpine
-COPY . /opt/http-batching-service
+COPY . /opt/batcher
 
-WORKDIR /opt/http-batching-service
+WORKDIR /opt/batcher/http-batching-service
 RUN go build
 
 ENTRYPOINT ["./http-batching-service"]

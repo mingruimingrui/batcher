@@ -4,6 +4,7 @@
 *.dll
 *.so
 *.dylib
+http-batching-service
 
 # Test binary, built with `go test -c`
 *.test
