@@ -1,5 +1,5 @@
 /*
-batcher is a library for batching requests.
+Package batcher is a library for batching requests.
 
 This library encapsualtes the process of grouping requests into batches
 for batch processing in an asynchronous manner.
